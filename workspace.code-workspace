@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "..\\goit-markup-hw-03"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "github-tutorial"
+  }
+}
