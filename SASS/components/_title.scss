@@ -2,6 +2,9 @@
   padding-top: 40px;
   padding-bottom: 24px;
 }
+h2 {
+  text-align: center;
+}
 
 .container {
   outline: 1px solid tomato;
@@ -21,28 +24,85 @@
   }
 }
 
+.images {
+  text-align: center;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
 .wrap {
+  position: relative;
   outline: 1px solid rgb(51, 185, 111);
   padding: 43px 50px 17px 50px;
   background-color: #fafafa;
 
+  @media screen and (min-width: 326px) {
+    padding: 43px 20px 17px 20px;
+  }
+
   @media screen and (min-width: 768px) {
-    padding-left: 7px;
-    padding-right: 6px;
-    padding-top: 37px;
-    padding-bottom: 36px;
+    padding: 37px 6px 36px 7px;
   }
   @media screen and (min-width: 1280px) {
-    padding-left: 105px;
-    padding-right: 107px;
-    padding-top: 47px;
-    padding-bottom: 30px;
+    padding: 47px 107px 30px 105px;
+  }
+}
+.wrap::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgb(230, 28, 28);
+  bottom: 0;
+  left: 0;
+}
+.gradient {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fafafa,
+    #fafafa 30px,
+    #e1e1e1 30px,
+    #e1e1e1 31px
+  );
+}
+.gradient::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 54px;
+  height: 40px;
+  top: 30px;
+  left: 53px;
+  background-image: url(/images/quotes.png);
+
+  @media screen and (min-width: 326px) {
+    top: 30px;
+    left: 12px;
+  }
+  @media screen and (min-width: 480px) {
+    top: 30px;
+    left: 6px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    left: 6px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 32px;
+    left: 105px;
   }
 }
 
 .text {
   position: relative;
-  z-index: 3;
   outline: 1px solid rgb(40, 48, 117);
   font-family: 'DM Sans';
   font-weight: 500;
@@ -51,14 +111,7 @@
   text-align: center;
   color: #000000;
   padding: 0 12px;
-
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #fafafa,
-    #fafafa 30px,
-    #e1e1e1 30px,
-    #e1e1e1 31px
-  );
+  z-index: 1;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -70,26 +123,5 @@
     font-size: 16px;
     line-height: 1.87;
     padding: 0 35px 2px 36px;
-  }
-}
-.text::before {
-  position: absolute;
-  content: '';
-  display: inline-block;
-  width: 54px;
-  height: 40px;
-  top: 0;
-  left: 0;
-  background-image: url(/images/quotes.png);
-}
-.images {
-  text-align: center;
-  margin-bottom: 32px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 20px;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 16px;
   }
 }
