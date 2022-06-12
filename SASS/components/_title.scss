@@ -6,9 +6,10 @@ h2 {
   text-align: center;
 }
 
-.container {
+.reviews {
   outline: 1px solid tomato;
   padding: 0 20px;
+  overflow-y: auto;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -24,7 +25,7 @@ h2 {
   }
 }
 
-.images {
+.reviews__images {
   text-align: center;
   margin-bottom: 32px;
 
@@ -36,7 +37,7 @@ h2 {
   }
 }
 
-.wrap {
+.reviews__wrap {
   position: relative;
   outline: 1px solid rgb(51, 185, 111);
   padding: 43px 50px 17px 50px;
@@ -54,7 +55,7 @@ h2 {
   }
 }
 
-.gradient {
+.reviews__gradient {
   background-image: repeating-linear-gradient(
     to bottom,
     #fafafa,
@@ -63,7 +64,7 @@ h2 {
     #e1e1e1 31px
   );
 }
-.gradient::before {
+.reviews__gradient::before {
   position: absolute;
   content: '';
   display: inline-block;
@@ -90,18 +91,34 @@ h2 {
     left: 105px;
   }
 }
-.gradient::after {
+.reviews__gradient::after {
   position: absolute;
   content: '';
   display: inline-block;
   width: 32px;
   height: 4px;
   background-image: url(/images/points.svg);
-  bottom: -33px;
-  left: 124px;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    margin: 0;
+    bottom: -20px;
+    left: 204px;
+  }
+  @media screen and (min-width: 768px) {
+    bottom: -8px;
+    left: 294px;
+  }
+  @media screen and (min-width: 1280px) {
+    bottom: -20px;
+    left: 501px;
+  }
 }
 
-.text {
+.reviews__text {
   position: relative;
   outline: 1px solid rgb(40, 48, 117);
   font-family: 'DM Sans';
@@ -124,4 +141,53 @@ h2 {
     line-height: 1.87;
     padding: 0 35px 2px 36px;
   }
+}
+p {
+  margin: 0;
+}
+.reviews__name {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  color: #000000;
+  text-align: center;
+  margin-top: 36px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.reviews__list {
+  margin-top: 16px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+  }
+}
+.reviews__item {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  display: inline-block;
+}
+.reviews__item:not(:last-child) {
+  margin-right: 18px;
+}
+.reviews__item:first-child {
+  border-radius: 0;
+  background-color: #fff;
+  background-image: url(/images/home.svg);
 }

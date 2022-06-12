@@ -7,71 +7,72 @@ h2 {
   text-align: center;
 }
 
-.container {
+.reviews {
   outline: 1px solid tomato;
   padding: 0 20px;
+  overflow-y: auto;
 }
 @media screen and (min-width: 480px) {
-  .container {
+  .reviews {
     width: 480px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
-  .container {
+  .reviews {
     width: 768px;
     padding: 0 74px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .container {
+  .reviews {
     width: 1280px;
     padding: 0 123px;
   }
 }
 
-.images {
+.reviews__images {
   text-align: center;
   margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
-  .images {
+  .reviews__images {
     margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .images {
+  .reviews__images {
     margin-bottom: 16px;
   }
 }
 
-.wrap {
+.reviews__wrap {
   position: relative;
   outline: 1px solid rgb(51, 185, 111);
   padding: 43px 50px 17px 50px;
   background-color: #fafafa;
 }
 @media screen and (min-width: 326px) {
-  .wrap {
+  .reviews__wrap {
     padding: 43px 20px 17px 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  .wrap {
+  .reviews__wrap {
     padding: 37px 6px 36px 7px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .wrap {
+  .reviews__wrap {
     padding: 47px 107px 30px 105px;
   }
 }
 
-.gradient {
+.reviews__gradient {
   background-image: repeating-linear-gradient(to bottom, #fafafa, #fafafa 30px, #e1e1e1 30px, #e1e1e1 31px);
 }
 
-.gradient::before {
+.reviews__gradient::before {
   position: absolute;
   content: "";
   display: inline-block;
@@ -82,42 +83,63 @@ h2 {
   background-image: url(/images/quotes.png);
 }
 @media screen and (min-width: 326px) {
-  .gradient::before {
+  .reviews__gradient::before {
     top: 30px;
     left: 12px;
   }
 }
 @media screen and (min-width: 480px) {
-  .gradient::before {
+  .reviews__gradient::before {
     top: 30px;
     left: 6px;
   }
 }
 @media screen and (min-width: 768px) {
-  .gradient::before {
+  .reviews__gradient::before {
     top: 20px;
     left: 6px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .gradient::before {
+  .reviews__gradient::before {
     top: 32px;
     left: 105px;
   }
 }
 
-.gradient::after {
+.reviews__gradient::after {
   position: absolute;
   content: "";
   display: inline-block;
   width: 32px;
   height: 4px;
   background-image: url(/images/points.svg);
-  bottom: -33px;
-  left: 124px;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .reviews__gradient::after {
+    margin: 0;
+    bottom: -20px;
+    left: 204px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews__gradient::after {
+    bottom: -8px;
+    left: 294px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews__gradient::after {
+    bottom: -20px;
+    left: 501px;
+  }
 }
 
-.text {
+.reviews__text {
   position: relative;
   outline: 1px solid rgb(40, 48, 117);
   font-family: "DM Sans";
@@ -130,7 +152,7 @@ h2 {
   z-index: 1;
 }
 @media screen and (min-width: 768px) {
-  .text {
+  .reviews__text {
     font-size: 14px;
     line-height: 216%;
     letter-spacing: 0.04em;
@@ -138,9 +160,69 @@ h2 {
   }
 }
 @media screen and (min-width: 1280px) {
-  .text {
+  .reviews__text {
     font-size: 16px;
     line-height: 1.87;
     padding: 0 35px 2px 36px;
   }
+}
+
+p {
+  margin: 0;
+}
+
+.reviews__name {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  color: #000000;
+  text-align: center;
+  margin-top: 36px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .reviews__name {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews__name {
+    font-size: 20px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__list {
+  margin-top: 16px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .reviews__list {
+    margin-top: 32px;
+  }
+}
+
+.reviews__item {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  display: inline-block;
+}
+
+.reviews__item:not(:last-child) {
+  margin-right: 18px;
+}
+
+.reviews__item:first-child {
+  border-radius: 0;
+  background-color: #fff;
+  background-image: url(/images/home.svg);
 }/*# sourceMappingURL=main.css.map */

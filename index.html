@@ -20,19 +20,31 @@
 
   <body>
     <section class="section">
-      <div class="container">
+      <div class="reviews">
         <h2 class="visually-hidden">Customer Reviews</h2>
-        <div class="images">
-          <img src="/images/testimonials1.png" alt="девушка" width="85px" />
+
+        <div class="reviews__images">
+          <img
+            srcset="/images/testimonials1.png 1x, ./images/testimonials2.png 2x"
+            src="./images/testimonials2.png"
+            alt="Девушка"
+          />
         </div>
-        <div class="wrap">
-          <div class="gradient">
-            <article class="text">
+
+        <div class="reviews__wrap">
+          <div class="reviews__gradient">
+            <article class="reviews__text">
               Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
               hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
             </article>
           </div>
         </div>
+        <p class="reviews__name">Emily, Los Angeles</p>
+        <ul class="reviews__list">
+          <li class="reviews__item"></li>
+          <li class="reviews__item"></li>
+          <li class="reviews__item"></li>
+        </ul>
       </div>
     </section>
   </body>
