@@ -118,25 +118,6 @@ h2 {
   right: 0;
   margin: 0 auto;
 }
-@media screen and (min-width: 480px) {
-  .reviews__gradient::after {
-    margin: 0;
-    bottom: -20px;
-    left: 204px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .reviews__gradient::after {
-    bottom: -8px;
-    left: 294px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .reviews__gradient::after {
-    bottom: -20px;
-    left: 501px;
-  }
-}
 
 .reviews__text {
   position: relative;
