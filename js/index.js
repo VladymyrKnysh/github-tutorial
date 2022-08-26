@@ -1,7 +1,20 @@
-const date = new Date("March 16, 2030 14:25:00");
+// Change value of isSuccess variable to call resolve or reject
+const isSuccess = false;
 
-date.setMinutes(50);
-// "Sat Mar 16 2030 14:50:00 GMT+0200"
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (isSuccess) {
+      resolve("Success! Value passed to resolve function");
+    } else {
+      reject("Error! Error passed to reject function");
+    }
+  }, 2000);
+});
 
-date.setFullYear(2040, 4, 8);
-// "Tue May 08 2040 14:50:00 GMT+0300"
+promise
+  .then(value => {
+    console.log(value);
+  })
+  .catch(error => {
+    console.log(error);
+  });
